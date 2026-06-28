@@ -46,7 +46,6 @@ body {
   font-family: var(--font-body);
   line-height: 1.7;
   overflow-x: hidden;
-  transition: background 600ms var(--ease), color 400ms var(--ease);
 }
 
 
@@ -92,7 +91,7 @@ button {
   border-radius: 999px;
   background: color-mix(in srgb, var(--panel) 88%, transparent);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(10px);
 }
 
 .brand-mark {
@@ -300,7 +299,7 @@ p {
   border: 1px solid var(--border);
   background: var(--panel);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
 }
 
 .hero-card {
@@ -413,8 +412,17 @@ p {
   width: calc(100% + 48px);
   aspect-ratio: 16 / 8.8;
   margin: -24px -24px 20px;
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--panel-strong) 70%, white);
+}
+
+.package-image img,
+.gallery-visual img,
+.testimonial-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .package-card.is-featured {
@@ -529,13 +537,11 @@ p {
   display: block;
   min-height: 230px;
   aspect-ratio: 4 / 3;
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
 }
 
 .gallery-card:nth-child(2n) .gallery-visual {
-  background-position: center;
-  background-size: cover;
+  aspect-ratio: 4 / 3;
 }
 
 .gallery-card h3 {
@@ -564,8 +570,8 @@ p {
   margin-bottom: 16px;
   border: 2px solid color-mix(in srgb, var(--gold) 48%, white);
   border-radius: 50%;
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--panel-strong) 70%, white);
 }
 
 .testimonial-card blockquote {
@@ -783,7 +789,7 @@ p {
   place-items: center;
   padding: 20px;
   background: rgba(20, 13, 10, 0.62);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
 }
 
 .gallery-modal.is-open {
@@ -1072,9 +1078,6 @@ body {
   display: block;
   max-width: none;
   opacity: 0.86;
-  filter:
-    drop-shadow(0 24px 32px rgba(77, 47, 24, 0.18))
-    drop-shadow(0 7px 14px rgba(255, 249, 235, 0.42));
   transform: translateZ(0);
   user-select: none;
 }
@@ -1105,14 +1108,6 @@ body {
   width: clamp(560px, 58vw, 1080px);
   opacity: 0.7;
   transform: rotate(-4deg) translateZ(0);
-}
-
-.ornament-package-ribbon {
-  right: calc((100vw - 100%) / -2 - clamp(170px, 12vw, 260px));
-  top: 70px;
-  width: clamp(250px, 22vw, 420px);
-  opacity: 0.52;
-  transform: rotate(8deg) translateZ(0);
 }
 
 .ornament-gallery-right {
@@ -1253,13 +1248,6 @@ body {
     bottom: -128px;
     width: 470px;
     opacity: 0.34;
-  }
-
-  .ornament-package-ribbon {
-    right: -285px;
-    top: 62px;
-    width: 340px;
-    opacity: 0.28;
   }
 
   .ornament-gallery-right {

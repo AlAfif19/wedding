@@ -15,7 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Parisienne&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/css/styles.css?v=20260628-ribbon-edge" />
+    <link rel="preload" href="assets/images/hero/hero-main.webp" as="image" fetchpriority="high" />
+    <link rel="stylesheet" href="src/css/styles.css?v=20260628-performance" />
   </head>
   <body data-mode="luxury">
     <header class="site-header" data-reveal>
@@ -28,8 +29,8 @@
     <main id="home">
       <section class="hero section-pad">
         <div class="section-overlay hero-overlay" aria-hidden="true">
-          <img class="section-ornament ornament-hero-top" src="assets/overlays/flowers/flower-top-corner.png" alt="" />
-          <img class="section-ornament ornament-hero-ring" src="assets/overlays/rings/ring-floating.png" alt="" />
+          <img class="section-ornament ornament-hero-top" src="assets/overlays/flowers/flower-top-corner.webp" alt="" decoding="async" fetchpriority="low" />
+          <img class="section-ornament ornament-hero-ring" src="assets/overlays/rings/ring-floating.webp" alt="" decoding="async" fetchpriority="low" />
         </div>
         <div class="hero-media" data-parallax="0.18" aria-hidden="true">
           <div class="hero-photo"></div>
@@ -85,8 +86,7 @@
 
       <section id="packages" class="section-pad soft-band">
         <div class="section-overlay packages-overlay" aria-hidden="true">
-          <img class="section-ornament ornament-package-left" src="assets/overlays/flowers/flower-left-large.png" alt="" />
-          <img class="section-ornament ornament-package-ribbon" src="assets/overlays/ribbons/ribbon-side.png" alt="" />
+          <img class="section-ornament ornament-package-left" src="assets/overlays/flowers/flower-left-large.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="container section-head" data-reveal>
           <p class="eyebrow">Paket Wedding</p>
@@ -97,8 +97,8 @@
 
       <section class="section-pad why">
         <div class="section-overlay why-overlay" aria-hidden="true">
-          <img class="section-ornament ornament-why-ribbon" src="assets/overlays/ribbons/ribbon-side.png" alt="" />
-          <img class="section-ornament ornament-why-petal" src="assets/overlays/ornaments/ornament-petal.png" alt="" />
+          <img class="section-ornament ornament-why-ribbon" src="assets/overlays/ribbons/ribbon-side.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+          <img class="section-ornament ornament-why-petal" src="assets/overlays/ornaments/ornament-petal.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="container section-head" data-reveal>
           <p class="eyebrow">Why Choose Us</p>
@@ -109,8 +109,8 @@
 
       <section id="gallery" class="section-pad gallery-section">
         <div class="section-overlay gallery-overlay" aria-hidden="true">
-          <img class="section-ornament ornament-gallery-right" src="assets/overlays/flowers/flower-right-large.png" alt="" />
-          <img class="section-ornament ornament-gallery-petal" src="assets/overlays/ornaments/ornament-petal.png" alt="" />
+          <img class="section-ornament ornament-gallery-right" src="assets/overlays/flowers/flower-right-large.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+          <img class="section-ornament ornament-gallery-petal" src="assets/overlays/ornaments/ornament-petal.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="container section-head" data-reveal>
           <p class="eyebrow">Portfolio Kami</p>
@@ -135,8 +135,8 @@
 
       <section id="process" class="section-pad process">
         <div class="section-overlay process-overlay" aria-hidden="true">
-          <img class="section-ornament ornament-process-flower" src="assets/overlays/flowers/flower-top-corner.png" alt="" />
-          <img class="section-ornament ornament-process-ring" src="assets/overlays/rings/ring-floating.png" alt="" />
+          <img class="section-ornament ornament-process-flower" src="assets/overlays/flowers/flower-top-corner.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+          <img class="section-ornament ornament-process-ring" src="assets/overlays/rings/ring-floating.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="container section-head" data-reveal>
           <p class="eyebrow">Proses Pernikahan</p>
@@ -158,7 +158,7 @@
 
       <section id="contact" class="section-pad contact">
         <div class="section-overlay contact-overlay" aria-hidden="true">
-          <img class="section-ornament ornament-contact-top" src="assets/overlays/flowers/flower-top-corner.png" alt="" />
+          <img class="section-ornament ornament-contact-top" src="assets/overlays/flowers/flower-top-corner.webp" alt="" loading="lazy" decoding="async" fetchpriority="low" />
         </div>
         <div class="container contact-grid">
           <div data-reveal>
@@ -212,7 +212,7 @@
       </div>
     </div>
 
-    <script src="src/data/site.js?v=20260628-gallery-process-finish"></script>
-    <script src="src/js/app.js?v=20260628-gallery-process-finish"></script>
+    <script src="src/data/site.js?v=20260628-performance"></script>
+    <script src="src/js/app.js?v=20260628-performance"></script>
   </body>
 </html>

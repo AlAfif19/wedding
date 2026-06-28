@@ -9,7 +9,9 @@
       .map(
         (item) => `
           <article class="package-card ${item.featured ? "is-featured" : ""}" data-reveal>
-            <span class="package-image" style="background-image: url('${item.image}')" aria-hidden="true"></span>
+            <span class="package-image" aria-hidden="true">
+              <img src="${item.image}" alt="" loading="lazy" decoding="async" />
+            </span>
             <span class="badge">${item.label}</span>
             <h3>${item.name}</h3>
             <p>${item.description}</p>
@@ -45,7 +47,9 @@
       .map(
         ([title, text, image], index) => `
           <button class="gallery-card" type="button" data-gallery-index="${index}" data-reveal>
-            <span class="gallery-visual" style="background-image: url('${image}')" aria-hidden="true"></span>
+            <span class="gallery-visual" aria-hidden="true">
+              <img src="${image}" alt="" loading="lazy" decoding="async" />
+            </span>
             <h3>${title}</h3>
             <p>${text}</p>
           </button>
@@ -60,7 +64,9 @@
       .map(
         ([name, quote, image]) => `
           <article class="testimonial-card">
-            <span class="testimonial-photo" style="background-image: url('${image}')" aria-hidden="true"></span>
+            <span class="testimonial-photo" aria-hidden="true">
+              <img src="${image}" alt="" loading="lazy" decoding="async" />
+            </span>
             <blockquote>${quote}</blockquote>
             <cite>${name}</cite>
           </article>
@@ -127,7 +133,11 @@
 
   function setupParallax() {
     const layers = qsa("[data-parallax]");
-    if (!layers.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (
+      !layers.length ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      window.matchMedia("(max-width: 760px)").matches
+    ) {
       return;
     }
 
