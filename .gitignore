@@ -1,0 +1,24 @@
+# Runtime files
+.server.pid
+.server.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local browser automation output
+.playwright-mcp/
+
+# Local generated previews and source contact sheets
+tmp-*.jpg
+aliya-*.png
+batch *.png
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Generated compressed assets can be rebuilt from source assets
+assets/compressed/*
+!assets/compressed/.gitkeep
