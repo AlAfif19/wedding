@@ -1108,11 +1108,11 @@ body {
 }
 
 .ornament-package-ribbon {
-  right: max(-240px, -13vw);
-  top: 58px;
-  width: clamp(260px, 24vw, 470px);
+  right: calc((100vw - 100%) / -2 - clamp(170px, 12vw, 260px));
+  top: 70px;
+  width: clamp(250px, 22vw, 420px);
   opacity: 0.52;
-  transform: rotate(14deg) translateZ(0);
+  transform: rotate(8deg) translateZ(0);
 }
 
 .ornament-gallery-right {
@@ -1256,9 +1256,9 @@ body {
   }
 
   .ornament-package-ribbon {
-    right: -230px;
-    top: 54px;
-    width: 330px;
+    right: -285px;
+    top: 62px;
+    width: 340px;
     opacity: 0.28;
   }
 
