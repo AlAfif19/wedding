@@ -274,6 +274,10 @@ p {
   transform: translateY(-3px);
 }
 
+.package-card.is-featured:hover {
+  transform: translateY(-10px);
+}
+
 .btn-primary {
   color: #fffaf2;
   background: linear-gradient(135deg, var(--gold), color-mix(in srgb, var(--rose) 56%, var(--gold)));
@@ -405,6 +409,7 @@ p {
   overflow: hidden;
   padding: 24px;
   border-radius: var(--radius);
+  transition: border-color 220ms var(--ease), box-shadow 220ms var(--ease), transform 220ms var(--ease);
 }
 
 .package-image {
@@ -426,8 +431,67 @@ p {
 }
 
 .package-card.is-featured {
-  border-color: color-mix(in srgb, var(--gold) 54%, var(--border));
-  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--gold) 78%, var(--border));
+  background:
+    linear-gradient(145deg, rgba(255, 251, 242, 0.96), rgba(255, 246, 232, 0.9)),
+    var(--panel-strong);
+  box-shadow:
+    0 26px 70px rgba(126, 82, 35, 0.22),
+    0 0 0 1px rgba(191, 138, 69, 0.28) inset;
+  transform: translateY(-8px);
+}
+
+.package-card.is-featured::before {
+  content: "Paling diminati";
+  position: absolute;
+  top: 14px;
+  right: -40px;
+  z-index: 3;
+  width: 160px;
+  padding: 7px 0;
+  color: #fffaf2;
+  background: linear-gradient(135deg, #a96f2b, var(--gold));
+  box-shadow: 0 12px 26px rgba(126, 82, 35, 0.24);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(38deg);
+}
+
+.package-card.is-featured::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: 0;
+  border: 1px solid rgba(191, 138, 69, 0.32);
+  border-radius: calc(var(--radius) - 6px);
+  pointer-events: none;
+}
+
+.package-card.is-featured > * {
+  position: relative;
+  z-index: 1;
+}
+
+.package-card.is-featured .package-image {
+  box-shadow: 0 18px 36px rgba(126, 82, 35, 0.18);
+}
+
+.package-card.is-featured .badge {
+  background: linear-gradient(135deg, #9d6728, var(--gold));
+}
+
+.package-card.is-featured .price {
+  color: #9d6728;
+  font-size: 1.62rem;
+}
+
+.package-card.is-featured .btn {
+  color: #fffaf2;
+  background: linear-gradient(135deg, var(--gold), color-mix(in srgb, var(--rose) 56%, var(--gold)));
+  box-shadow: 0 16px 32px rgba(126, 82, 35, 0.22);
 }
 
 .badge {
@@ -482,6 +546,31 @@ p {
     linear-gradient(180deg, rgba(255, 250, 242, 0.82), rgba(255, 250, 242, 0.54)),
     radial-gradient(circle at 18% 14%, rgba(215, 166, 154, 0.2), transparent 8rem);
   box-shadow: 0 18px 48px rgba(92, 58, 25, 0.09);
+}
+
+.faq-symbol {
+  display: grid;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--gold) 44%, var(--border));
+  border-radius: 50%;
+  color: var(--gold);
+  background: color-mix(in srgb, var(--panel-strong) 86%, transparent);
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.faq-item.is-open {
+  border-color: color-mix(in srgb, var(--gold) 54%, var(--border));
+  box-shadow: 0 18px 46px rgba(126, 82, 35, 0.14);
+}
+
+.faq-item.is-open .faq-symbol {
+  color: #fffaf2;
+  background: var(--gold);
 }
 
 .icon-card::after {

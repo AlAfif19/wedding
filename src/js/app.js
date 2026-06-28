@@ -98,7 +98,7 @@
           <article class="faq-item ${index === 0 ? "is-open" : ""}">
             <button class="faq-question" type="button" aria-expanded="${index === 0 ? "true" : "false"}">
               <span>${question}</span>
-              <span aria-hidden="true">+</span>
+              <span class="faq-symbol" aria-hidden="true">${index === 0 ? "-" : "+"}</span>
             </button>
             <div class="faq-answer">
               <p>${answer}</p>
@@ -235,6 +235,7 @@
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
         const isOpen = item.classList.toggle("is-open");
+        qs(".faq-symbol", button).textContent = isOpen ? "-" : "+";
         button.setAttribute("aria-expanded", String(isOpen));
       });
     });
